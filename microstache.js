@@ -16,9 +16,6 @@ and returns the templated result:
 
 "<h1>My Title!</h1>"
 
-
-Simple! (Those regexes were NOT)
-
 */
 
 var Microstache = (function (my) {
