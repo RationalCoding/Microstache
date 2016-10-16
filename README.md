@@ -1,5 +1,5 @@
 # Mircostache
-308 Byte module for templating with mustache notation.  
+308 byte module for templating with mustache notation.  
 
 ```html
 <script src="microstache.min.js">
