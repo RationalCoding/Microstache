@@ -1,4 +1,4 @@
-# Mircostache
+# Microstache
 308 byte module for templating with mustache notation.  
 
 ```html
