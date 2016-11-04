@@ -17,24 +17,27 @@ and returns the templated result:
 "<h1>My Title!</h1>"
 
 */
-
-var Microstache = (function (my) {
-    my.template = function (htmlTemplate, data) {
-        var keys = Object.keys(data).map(function (e) {
-            return "{{\\s*" + e + "\\s*}}"
-        }).join("|");
-        var rendered;
-        if (!!keys) {
-            var re = new RegExp(keys, "gi");
-            rendered = htmlTemplate.replace(re, function (m) {
-                var re = /{{\s*([^\s]*)\s*}}/g;
-                return data[re.exec(m)[1]]
-            });
-        } else {
-            rendered = htmlTemplate;
+Microstache = (function (my) {
+        var reEscape = function(str) {
+            return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
         }
-        var cleaned = rendered.replace(/{{[^}}]*}}/gi, "");
-        return cleaned;
-    }
-    return my;
-}({}));
+        my.template = function (htmlTemplate, data) {
+            var keys = Object.keys(data).map(function (e) {
+                return "{{\\s*" + reEscape(e) + "\\s*}}"
+            }).join("|");
+            var rendered;
+            if (!!keys) {
+                var re = new RegExp(keys, "gi");
+                rendered = htmlTemplate.replace(re, function (m) {
+                    var re = /{{\s*([^\s]*)\s*}}/g;
+                    return data[re.exec(m)[1]]
+                });
+                console.log("r", rendered);
+            } else {
+                rendered = htmlTemplate;
+            }
+            var cleaned = rendered.replace(/{{[^}}]*}}/gi, "");
+            return cleaned;
+        }
+        return my;
+    }({}))
