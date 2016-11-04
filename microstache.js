@@ -18,26 +18,49 @@ and returns the templated result:
 
 */
 Microstache = (function (my) {
-        var reEscape = function(str) {
+        function reEscape(str) {
             return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
         }
+        function deepFind(obj, path) {
+            var paths = path.split('.'),
+                current = obj,
+                i;
+
+            for (i = 0; i < paths.length; ++i) {
+                if (current[paths[i]] == undefined) {
+                    return undefined;
+                } else {
+                    current = current[paths[i]];
+                }
+            }
+            return current;
+        }
         my.template = function (htmlTemplate, data) {
-            var keys = Object.keys(data).map(function (e) {
-                return "{{\\s*" + reEscape(e) + "\\s*}}"
-            }).join("|");
-            var rendered;
-            if (!!keys) {
-                var re = new RegExp(keys, "gi");
+            var re,
+                rendered,
+                key,
+                keys = [];
+            function recurPush(obj, past){
+                for (key in obj){
+                    if (typeof obj[key] === 'object'){
+                        recurPush(obj[key], past+key+'.');
+                    }
+                    
+                    keys.push("{{\\s*" + reEscape((past+key).toString()) + "\\s*}}");
+                };
+            }  
+            recurPush(data, '');
+            keys =keys.join("|");
+            if (keys) {
+                re = new RegExp(keys, "gi");
                 rendered = htmlTemplate.replace(re, function (m) {
                     var re = /{{\s*([^\s]*)\s*}}/g;
-                    return data[re.exec(m)[1]]
+                    return deepFind(data,re.exec(m.toString())[1]);
                 });
-                console.log("r", rendered);
             } else {
                 rendered = htmlTemplate;
             }
-            var cleaned = rendered.replace(/{{[^}}]*}}/gi, "");
-            return cleaned;
+            return rendered.replace(/{{[^}}]*}}/gi, "");
         }
         return my;
     }({}))
