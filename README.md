@@ -1,12 +1,21 @@
-# Mircostache
-564 byte module for templating with mustache notation.  
+<h1 align="center">
+  <br>
+  <a href="#"><img src="https://github.com/RationalCoding/Microstache/raw/master/src/logo.png" alt="HyperHost" width="200"></a>
+  <br>
+  Microstache
+  <br>
+  <br>
+</h1>
+<h4 align="center">564 byte mustache templating.</h4>
+<br>
+
 
 Just include it in your project:
 ```html
 <script src="microstache.min.js">
 ```
 
-Call `Microstache.template` with a template string and a data object.
+Then use `Microstache.template` to template a string with the data in an object.  
 ```javascript
 var template = "<h1>{{someData}}</h1><h2>{{moreData}}</h2><h3>{{deepData.deep}}</h3>";  
 var data = {
