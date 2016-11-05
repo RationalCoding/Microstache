@@ -32,3 +32,7 @@ var templated = Microstache.template(template,data);  //"<h1>A String</h1><h2>An
 ```
 
 Fast, powerful string templating, for less than a kB. Can it get simpler than that?
+
+<br>
+
+*If you need more than just object templating, try [Mustache.js](https://github.com/janl/mustache.js)*
