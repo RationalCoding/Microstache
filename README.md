@@ -6,7 +6,7 @@ Just include it in your project:
 <script src="microstache.min.js">
 ```
 
-And call `Microstache.template` with a template string and a data object.
+Call `Microstache.template` with a template string and a data object.
 ```javascript
 var template = "<h1>{{someData}}</h1><h2>{{moreData}}</h2><h3>{{deepData.deep}}</h3>";  
 var data = {
