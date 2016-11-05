@@ -8,7 +8,7 @@ Just include it in your project:
 
 And call `Microstache.template` with a template string and a data object.
 ```javascript
-var template = "<h1>{{someData}}</h1><h2>{{moreData}}</h2><h3>{{deepData.deeper.deeper}}</h3>";  
+var template = "<h1>{{someData}}</h1><h2>{{moreData}}</h2><h3>{{deepData.deep}}</h3>";  
 var data = {
   someData : "A String",
   moreData : "Another string.",
