@@ -50,7 +50,7 @@ Microstache = (function (my) {
                 };
             }  
             recurPush(data, '');
-            keys =keys.join("|");
+            keys = keys.join("|");
             if (keys) {
                 re = new RegExp(keys, "gi");
                 rendered = htmlTemplate.replace(re, function (m) {
