@@ -21,10 +21,10 @@ var template = "<h1>{{someData}}</h1>";
 var data = {
   someData : "A String",
 }
-var templated = Microstache.template(template,data);  //"<h1>A String</h1>"
+var templated = Microstache.template(template,data);  // "<h1>A String</h1>"
 ```
 
-Fast, powerful string templating, for less than a kB. Can it get simpler than that?  
+Fast and powerful string templating for less than a kB. Can it get simpler than that?  
 
 <br>
 
