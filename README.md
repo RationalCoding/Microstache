@@ -29,3 +29,5 @@ Fast and powerful string templating for less than a kB. Can it get simpler than 
 <br>
 
 *If you need more than just object templating, try [Mustache.js](https://github.com/janl/mustache.js)*
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
