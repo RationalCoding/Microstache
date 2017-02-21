@@ -1,4 +1,4 @@
-window.Microstache = (function (my) {
+var Microstache = (function (my) {
   function reEscape (str) {
     return str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&')
   }
@@ -45,3 +45,9 @@ window.Microstache = (function (my) {
   }
   return my
 }({}))
+
+if (typeof window !== 'undefined') {
+  window.Microstache = Microstache
+} else {
+  module.exports = Microstache
+}

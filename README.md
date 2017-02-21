@@ -6,7 +6,7 @@
   <br>
   <br>
 </h1>
-<h4 align="center">564 byte mustache templating.</h4>
+<h4 align="center">558 byte mustache templating.</h4>
 <br>
 
 

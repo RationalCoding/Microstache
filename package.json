@@ -1,0 +1,29 @@
+{
+  "name": "microstache",
+  "version": "1.0.0",
+  "description": "Tiny templating libary.",
+  "main": "microstache.js",
+  "scripts": {
+    "test": "standard \"src/*.js\" \"test/*.js\" && tape test/*.js",
+    "build": "uglify src/microstache.js | dist/microstach.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RationalCoding/Microstache.git"
+  },
+  "keywords": [
+    "templating",
+    "small"
+  ],
+  "author": "Thomas Mullen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RationalCoding/Microstache/issues"
+  },
+  "homepage": "https://github.com/RationalCoding/Microstache#readme",
+  "devDependencies": {
+    "standard": "^8.6.0",
+    "tape": "^4.6.3",
+    "uglify": "^0.1.5"
+  }
+}
