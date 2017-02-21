@@ -8,7 +8,7 @@
 </h1>
 <h4 align="center">558 byte mustache templating.</h4>
 <br>
-
+[![Build Status](https://travis-ci.org/RationalCoding/Microstache.svg?branch=master)](https://travis-ci.org/RationalCoding/Microstache)
 
 Just include it in your project:
 ```html
