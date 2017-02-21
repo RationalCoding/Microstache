@@ -17,11 +17,11 @@ Just include it in your project:
 
 Then use `Microstache.template` to template a string with the data in an object.  
 ```javascript
-var template = "<h1>{{someData}}</h1>";  
+var template = '<h1>{{someData}}</h1>'
 var data = {
-  someData : "A String",
+  someData: 'A String',
 }
-var templated = Microstache.template(template,data);  // "<h1>A String</h1>"
+var templated = Microstache.template(template, data);  // '<h1>A String</h1>'
 ```
 
 Fast and powerful string templating for less than a kB. Can it get simpler than that?  
