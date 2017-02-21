@@ -8,7 +8,7 @@
 </h1>
 <h4 align="center">558 byte mustache templating.</h4>
 <br>
-[![Build Status](https://travis-ci.org/RationalCoding/Microstache.svg?branch=master)](https://travis-ci.org/RationalCoding/Microstache)
+[![Build Status](https://travis-ci.org/RationalCoding/Microstache.svg?branch=master)](https://travis-ci.org/RationalCoding/Microstache) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Just include it in your project:
 ```html
@@ -29,5 +29,3 @@ Fast and powerful string templating for less than a kB. Can it get simpler than 
 <br>
 
 *If you need more than just object templating, try [Mustache.js](https://github.com/janl/mustache.js)*
-
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
