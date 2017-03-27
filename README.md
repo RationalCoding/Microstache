@@ -9,7 +9,7 @@
 <h4 align="center">558 byte mustache templating.</h4>
 <br>
 
-[![Build Status](https://travis-ci.org/RationalCoding/Microstache.svg?branch=master)](https://travis-ci.org/RationalCoding/Microstache) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Build Status](https://travis-ci.org/RationalCoding/Microstache.svg?branch=master)](https://travis-ci.org/RationalCoding/microstache) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Just include it in your project:
 ```html
